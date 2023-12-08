@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Célia</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
+</head>
+<body>
+    <!-- Templates -->
+    <div id="category_choice" class="template category_choice">
+        <p></p>
+        <div class="hidden">
+        </div>
+    </div>
+
+    <div id="question_choice" class="template question_choice">
+        <p></p>
+    </div>
+
+    <!-- Code -->
+    <div id="main_page">
+        <span id="banner">
+            <a href="sources.html"> <img id="dynamicimg" src="./res/framed-narrator-assets/4f.png"></a>
+            <p id="dynamictext">Bonjour! Je suis cél<strong>ia</strong>! Ensemble, on va débunker les idées reçues sur le réchauffement climatique! Clique sur moi pour accéder aux sources et crédits. Le menu des questions est déroulable.</p>
+            <p id="answer_hidden" class="hidden"></p>
+            <button id="show_answer_button">Je veux ma réponse</button>
+        </span>
+
+        <div id="earth_container" class="normal_earth">
+            <img
+                id="clouds_assets_1"
+                src="./res/cloud-assets/cloud_1.png"
+            />
+            <img
+                id="clouds_assets_2"
+                src="./res/cloud-assets/cloud_2.png"
+            />
+        </div>
+
+        <div id="choices_container">
+        </div>
+
+    </div>
+
+    <div id="welcome_popup">
+        <h1 id="title">Bienvenue sur l'outil Célia !</h1>
+        <p id="welcome_message">Bonjour! Bienvenue sur l'outil d'assistant Cél-IA, ou Célia. Avec Célia, renseignez-vous sur les informations importantes et les idées reçues quant au réchauffement climatique.</p>
+        <a onclick="disable_display('welcome_popup'); enable_display('choices_container'); insert_categories();"><p id="start_bouton">COMMENCER</p></a>
+    </div>
+
+    <div id="choices_popup">
+        <p>Choice</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./scripts/data.js" type="text/javascript"></script>
+    <script src="./scripts/fetch_api.js" type="text/javascript"></script>
+    <script src="./scripts/edit_banner_content.js" type="text/javascript"></script>
+    <script src="./scripts/choices_manager.js" type="text/javascript"></script>
+    <script src="./scripts/display_manager.js" type="text/javascript"></script>
+    <script src="./scripts/main.js" type="text/javascript"></script>
+</body>
+</html>

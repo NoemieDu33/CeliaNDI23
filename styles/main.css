@@ -1,0 +1,235 @@
+/* body {
+    overflow: hidden;
+} */
+@font-face {
+    font-family: "Prout-Regular";
+    src: url("../res/Prout-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    font-family: "Prout-Regular";
+    font-size: 45px;
+}
+
+#show_answer_button {
+    display: none;
+}
+
+body {
+    height: 100%;
+}
+
+.template {
+    display: none;
+}
+
+#dynamicimg{
+    width:200px;
+    float:left;
+    margin:10px;
+}
+#banner{
+    color: azure;
+    padding: 10px;
+    width: 95%;
+    margin: 20px;
+    position: fixed;
+    background: rgb(57,45,120);
+    background: linear-gradient(90deg, rgba(57,45,120,1) 27%, rgba(7,0,89,1) 62%, rgba(37,14,60,1) 100%);
+    z-index: 100;
+}
+
+#choices_container {
+    background: rgb(236,174,92);
+    background: linear-gradient(135deg, rgba(236,174,92,1) 0%, rgba(199,112,189,1) 100%);
+    height: 250px;
+    display: block;
+    position: absolute;
+    margin-top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: scroll;
+    padding: 10px;
+}
+
+.category_choice {
+    background-color: transparent;
+    /*background-image: linear-gradient(#fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);*/
+}
+
+.category_choice:hover {
+    background-color: rgb(83, 83, 155);
+    color: lavenderblush;
+}
+
+.category_choice > p {
+    display: block;
+}
+
+.question_choice {
+    background-color: limegreen;
+}
+
+.hidden {
+    display: none;
+}
+
+#welcome_popup, #choices_popup {
+    display: none;
+}
+
+#main_page {
+    display: block;
+    z-index: 0;
+}
+
+#title {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 60px;
+    font-family: "Prout-Regular";
+    text-align: center;
+    color:darkorchid;
+    text-shadow: 2px 2px black;
+}
+
+#welcome_message {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Prout-Regular";
+    text-align: justify;
+    color:rgb(20, 20, 20);
+}
+
+#start_bouton {
+    font-size: 54px;
+    font-family: "Prout-Regular";
+    color: rgba(255, 183, 0, 1);
+    background-color: rgba(255, 215, 0, 0.20);
+    margin-top: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#start_bouton:hover {
+    font-size: 60px;
+    color: rgba(255, 255, 0, 1);
+}
+
+#welcome_popup {
+    z-index: 1;
+    position: sticky;
+    background-color: rgba(215, 215, 215, 0.7);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 400px;
+    align-items: center;
+    text-align: center;
+}
+
+#clouds_assets_1{
+    top: 120px;
+    left: -30px;
+    z-index: 1;
+    position: relative;
+    width: 125px;
+    height: 125px;
+    animation: 10s linear 0s infinite vent1;
+}
+
+#clouds_assets_2{
+    top: 230px;
+    left: 0px;
+    z-index: 1;
+    position: relative;
+    width: 125px;
+    height: 125px;
+    animation: 10s linear 0s infinite vent2;
+}
+
+@keyframes apparition {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+@keyframes vent1 {
+    from {
+        left: -40px;
+    }
+    50% {
+        left: -20px;
+    }
+    to {
+        left: -40px;
+    }
+}
+
+@keyframes vent2 {
+    from {
+        left: -10px;
+    }
+    50% {
+        left: 10px;
+    }
+    to {
+        left: -10px;
+    }
+}
+
+#earth_container{
+    margin-top: 10%;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+    height: 350px;
+    /* background-image: url("../res/earth-assets/earth_1.png"); */
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+    background-position: center;
+    background-position-y: 100px;
+}
+
+.normal_earth {
+    background-image: url("../res/earth-assets/earth_1.png");
+}
+
+.dead_earth {
+    background-image: url("../res/earth-assets/earth_2.png");
+}
+
+.drowned_earth {
+    background-image: url("../res/earth-assets/earth_3.png");
+}
+
+#main_page {
+    display: grid;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../res/background.png");
+    background-attachment: fixed;
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#welcome_popup {
+    position: absolute;
+}
+
+a{
+    color: white;
+    font-family: Arial;
+}
